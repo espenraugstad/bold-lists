@@ -8,8 +8,21 @@
 </head>
 <body>
     <main>
-        <h1>Bold List</h1>
+        <h1>Bolden Ordered List</h1>
         <p>Enter list items in the textarea below. Use a new line to make a new list element.</p>
+        <div>
+        <label for="listStyleType">Select list style</label>
+        <select name="" id="listStyleType">
+            <option value="decimal">Decimal numbers starting with 1</option>
+            <option value="decimal-leading-zero">Decimal numbers, padded by initial zeros</option>
+            <option value="lower-greek">Lowercase classical Greek</option>
+            <option value="lower-alpha">Lowercase ASCII letters</option>
+            <option value="upper-alpha">Uppercase ASCII letters</option>
+            <option value="lower-roman">Lowercase roman numerals</option>
+            <option value="upper-roman">Uppercase roman numerals</option>
+        </select>
+    </div>
+
         <textarea name="" id="input"></textarea>
         <button id="bolden">Generate HTML</button>
         <h2>Result</h2>

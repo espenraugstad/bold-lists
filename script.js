@@ -1,3 +1,4 @@
+const listStyleType = document.getElementById("listStyleType");
 const input = document.getElementById("input");
 const bolden = document.getElementById("bolden");
 const res = document.getElementById("res");
@@ -9,6 +10,7 @@ function handleBolden(){
     let listContent = input.value;
     let list = listContent.split("\n");
     let ol = styleHtml(list);
+    res.innerHTML = "";
     res.appendChild(ol);
     output.innerText = ol.outerHTML;
     output.classList.remove("hidden");
@@ -17,6 +19,7 @@ function handleBolden(){
 function styleHtml(list){
     let ol = document.createElement("ol");
     ol.style.fontWeight = "bold";
+    ol.style.listStyleType = listStyleType.value;
     for(let item of list){
         let li = document.createElement("li");
         let span = document.createElement("span");
